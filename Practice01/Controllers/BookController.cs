@@ -34,5 +34,9 @@ namespace Practice01.Controllers
             ViewBag.books = books;
             return View();
         }
+        public JsonResult GetBooksJson()
+        {
+            return Json(books,JsonRequestBehavior.AllowGet);
+        }
     }
 }
